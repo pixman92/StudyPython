@@ -57,3 +57,13 @@ Dopamine break...
 
 
 LEARNED
+
+//GET request on 'server'
+app.get("/dreams/:hello", function (request, response) {
+  response.send(request.params.hello);
+});
+
+//GET request from python
+def runMe():
+  r = requests.get("https://studypython.gomix.me/dreams/welcome")
+  print r.text

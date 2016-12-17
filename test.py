@@ -1,4 +1,53 @@
+#here we go!
 import requests
-r = requests.get('https://graph.facebook.com/oauth/access_token?grant_type=client_credentials&client_id=1307263279337637&client_secret=641f789bf2dd634bd822c9ec330c8b35')
-access_token = r.text.split('=')[1]
-print r.[0]
+import requests
+# ==================
+#turn glossary warning off!
+# from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
+# requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
+# ====================
+
+enter = raw_input("Run?\n")
+
+#Test, just to see if the GET function works
+def runMe(passMe):
+  r = requests.get("http://studypython.gomix.me/dreams/"+passMe)
+  print r.text
+  
+  
+# GET definition of sent word
+def getDef(param):
+  r = requests.get("http://studypython.gomix.me/dictionary/" + param)
+  print "====\n" + r.text + "\n====\n"
+  
+def getThesaurus(param):
+  r = requests.get("http://studypython.gomix.me/thesaurus/" + param)
+  print "====\n" + r.text + "\n====\n"
+  
+  
+
+  
+if enter == "runMe":
+  enter2 = raw_input("vars?\n")
+  if enter2 != '':
+    runMe(enter2)
+  else:
+    runMe()
+    
+if enter == "getDef":
+  enter2 = raw_input("vars?\n")
+  if enter2 != '':
+    getDef(enter2)
+  else:
+    getDef()
+  
+if enter == "getThesaurus":
+  enter2 = raw_input("vars?\n")
+  if enter2 != '':
+    getThesaurus(enter2)
+  else:
+    getThesaurus()
+    
+    
