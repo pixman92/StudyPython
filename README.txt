@@ -1,7 +1,7 @@
 PYTHON LEARNING - READ ME
 
 TODO
-
+-
 
 
 
@@ -67,3 +67,24 @@ app.get("/dreams/:hello", function (request, response) {
 def runMe():
   r = requests.get("https://studypython.gomix.me/dreams/welcome")
   print r.text
+
+//Keep while'ing until EOF
+while True:
+  enter = raw_input("Run?\n");
+  if enter=="EOF":
+    break
+  if enter == "runRan":
+      enter2 = raw_input("vars?\n")
+      if enter2 != '':
+        runRan(enter2)
+      else:
+        runRan()
+        
+  if enter == "runPrintString":
+      enter2 = raw_input("vars?\n")
+      if enter2 != '':
+        runPrintString(enter2)
+      else:
+        runPrintString()
+    
+    
